@@ -1,10 +1,11 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
 
-    devtool: 'inline-sourcemap',
+    devtool: 'source-map',
 
-    entry: './src/index.js',
+    entry: ['babel-polyfill', 'react-hot-loader/patch', './src/index.js'],
 
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -23,10 +24,11 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: "/node_modules",
+                exclude: "/node_modules/",
                 loader: "babel-loader",
                 options: {
                     presets: ["env", "react", "stage-0"],
+                    plugins: ["react-hot-loader/babel"],
                     code: true,
                     comments: true,
                     cacheDirectory: true,
@@ -41,6 +43,10 @@ module.exports = {
         host: "0.0.0.0",
         historyApiFallback: true,
         port: 9000,
-        noInfo: true
-    }
+        noInfo: true,
+
+    },
+    plugins: [
+        new webpack.NamedModulesPlugin()
+    ]
 }

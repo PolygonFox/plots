@@ -21,8 +21,8 @@ const StyledListItem = styled.li`
 
 const Navigation = ({ children, itemComponent: ItemComponent }) => (
     <StyledList>
-        {children.map((child) => {
-            return (ItemComponent) ? (<ItemComponent>{child}</ItemComponent>) : (<StyledListItem>{child}</StyledListItem>)
+        {children.map((child, id) => {
+            return (ItemComponent) ? (<ItemComponent key={id}>{child}</ItemComponent>) : (<StyledListItem key={id}>{child}</StyledListItem>)
         })}
     </StyledList>
 );

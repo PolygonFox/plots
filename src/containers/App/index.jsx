@@ -11,7 +11,7 @@ import {
 import theme from 'Constants/theme';
 
 import Home from '../pages/Home'
-import Game from '../pages/Game'
+import Game from '../Game'
 
 import MainNavigation from 'Components/UI/Menus/MainNavigation'
 import Button from 'Components/UI/Button';

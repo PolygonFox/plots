@@ -2,8 +2,10 @@
 
 import React, { Component } from 'react';
 
-class Home extends Component {
-    state = {  }
+class Game extends Component {
+    state = { 
+        name: 'Test'
+     }
     render() {
         return (
             <h1>Game</h1>
@@ -11,4 +13,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Game;
