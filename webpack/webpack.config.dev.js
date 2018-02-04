@@ -14,9 +14,11 @@ module.exports = {
 
     resolve: {
         extensions: ['.js', '.jsx', '.json'],
+      
         alias: {
             Components: path.resolve(__dirname, '../src/components/'),
-            Constants: path.resolve(__dirname, '../src/constants/')
+            Constants: path.resolve(__dirname, '../src/constants/'),
+            Modules: path.resolve(__dirname, '../src/Modules/')
         }
     },
 
@@ -24,7 +26,7 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                exclude: "/node_modules/",
+                exclude: "/node_modules",
                 loader: "babel-loader",
                 options: {
                     presets: ["env", "react", "stage-0"],
