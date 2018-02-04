@@ -50,9 +50,11 @@ class App extends Component {
                             <MainNavigation>
                                 <Link to="/"><Button>HOME</Button></Link>
                                 <Link to="/game"><Button>GAME</Button></Link>
+                                <Link to="/game/cube"><Button>CUBE</Button></Link>
                             </MainNavigation>
                             <Route exact path="/" component={Home} />
                             <Route path="/game" component={Game} />
+                        
                         </StyledApp>
                     </ThemeProvider>
                 </Router>

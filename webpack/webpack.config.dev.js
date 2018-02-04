@@ -30,7 +30,7 @@ module.exports = {
                 loader: "babel-loader",
                 options: {
                     presets: ["env", "react", "stage-0"],
-                    plugins: ["react-hot-loader/babel"],
+                    plugins: ["react-hot-loader/babel", "transform-decorators-legacy"],
                     code: true,
                     comments: true,
                     cacheDirectory: true,
@@ -44,9 +44,7 @@ module.exports = {
         compress: true,
         host: "0.0.0.0",
         historyApiFallback: true,
-        port: 9000,
-        noInfo: true,
-
+        port: 9000
     },
     plugins: [
         new webpack.NamedModulesPlugin()
