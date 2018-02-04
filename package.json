@@ -30,7 +30,8 @@
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --config ./webpack/webpack.config.dev.js"
+    "start": "webpack-dev-server --hot --inline --config ./webpack/webpack.config.dev.js",
+    "build": "webpack --config ./webpack/webpack.config.dev.js"
   },
   "keywords": [],
   "author": "",
