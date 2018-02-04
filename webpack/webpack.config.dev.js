@@ -18,7 +18,7 @@ module.exports = {
         alias: {
             Components: path.resolve(__dirname, '../src/components/'),
             Constants: path.resolve(__dirname, '../src/constants/'),
-            Modules: path.resolve(__dirname, '../src/Modules/')
+            Modules: path.resolve(__dirname, '../src/modules/')
         }
     },
 
